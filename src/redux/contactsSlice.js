@@ -28,12 +28,7 @@ const contactsSlice = createSlice({
     [addContact.fulfilled](state, action) {
       state.isLoading = false;
       state.error = null;
-
-      if(state.items.some(contact => contact.name === action.payload.name)) {
-        alert(`${action.payload.name} is already in contacts`);
-        return;
-      } 
-        state.items.push(action.payload);
+      state.items.push(action.payload);
     },
     [addContact.rejected](state, action) {
       state.isLoading = false;
