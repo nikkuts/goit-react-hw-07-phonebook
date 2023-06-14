@@ -20,11 +20,11 @@ export default function ContactList () {
 
   return (
   <ul className={css.list}>
-  {getVisibleContacts().map(({id, name, number}) => (
+  {getVisibleContacts().map(({id, name, phone}) => (
     <Contact 
     id={id}
     name={name}
-    number={number}
+    number={phone}
     />
   ))}
   </ul>
